@@ -22,8 +22,7 @@ screen.onkey(fun=snake.up, key="Up")  # turn left with left arrow
 screen.onkey(fun=snake.down, key="Down")  # turn left with left arrow
 
 running = True
-time_sleep = 0.1
-stop_point = 0
+# time_sleep = 0.1
 while running:
     screen.update()
     snake.move()
@@ -38,14 +37,14 @@ while running:
     if snake.head.xcor() > 280 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
         scoreboard.save_high_score()
         snake.reset()
-        running = False
+        # running = False
         # scoreboard.game_over()
     # Detect collision with self
     for seg in snake.snake_list[1:]:
         if snake.head.distance(seg) < 10:
             scoreboard.save_high_score()
             snake.reset()
-            running = False
+            # running = False
             # scoreboard.game_over()
 
 screen.exitonclick()
