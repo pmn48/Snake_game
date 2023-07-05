@@ -34,7 +34,7 @@ class Snake:
 
     def extra(self):
         self.new_segment(self.snake_list[-1].position())
-        self.time_sleep *= 0.99
+        self.time_sleep *= 0.85
 
     def move(self):
         for i in range(-1, -len(self.snake_list), -1):
